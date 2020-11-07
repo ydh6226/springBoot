@@ -23,7 +23,7 @@ public class MemberService {
      * @return
      */
     @Transactional //다른 메소드만 readOnly=true 로 설정
-    public Long Join(Member member) {
+    public Long join(Member member) {
         validateDuplicateMember(member); //중복 회원 검증
         memberRepository.save(member);
         return member.getId();
